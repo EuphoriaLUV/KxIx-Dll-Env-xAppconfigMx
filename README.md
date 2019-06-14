@@ -7,7 +7,7 @@ Model Class and Interface for KxIx Environment
     <?xml version="1.0" encoding="utf-8"?>
     <KxIx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
       <MDataBase>
-        <IP>192.168.0.200</IP>
+        <IP>192.168.0.200</IP>    or    <IP>106.246.89.122</IP>
         <PORT>3307</PORT>
       </MDataBase>
       <DataBase>
@@ -46,9 +46,8 @@ Model Class and Interface for KxIx Environment
       <SMS_ALIMI>
         <USE>0</USE>
         <PHONE_NUMBERS>
-          <PHONE>01089312318</PHONE>
-          <PHONE>01035759083</PHONE>
-          <PHONE>01091477244</PHONE>
+          <PHONE>01000000000</PHONE>
+          <PHONE>01000000001</PHONE>
         </PHONE_NUMBERS>
       </SMS_ALIMI>
       <Review>
