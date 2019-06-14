@@ -137,6 +137,12 @@ Model Class and Interface for KxIx Environment
 
 ## xAppEnv
 > Application Environment
+    - DatabaseType
+    |Value|Description|
+    |:---|:---|
+    | 0 | Local Storage SQLite DB |
+    | 1 | Network Drive Storage SQLite DB |
+    | 2 | IPV6 MySQL or Maria DB |
 
 ```c#
     [XmlElement(ElementName = "DataBaseType")]
