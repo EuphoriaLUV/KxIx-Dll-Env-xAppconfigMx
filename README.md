@@ -53,7 +53,7 @@ Model Class and Interface for KxIx Environment
     [XmlElement(ElementName = "Ranking")]
     public xLDBPath Ranking { get; set; }
 
-## xLDBPaths
+## xMDBPath
 >Maria DB Path
 
     public class xMDBPath : IxDBPath
@@ -66,6 +66,85 @@ Model Class and Interface for KxIx Environment
 
         ...
     }
+
+## xSMSAlimi
+> SMS Alimi Service Use and Phone numbers   
+
+    [XmlElement(ElementName = "USE")]
+    public int Use { get; set; }
+
+    [XmlArray("PHONE_NUMBERS")]
+    [XmlArrayItem(typeof(string), ElementName = "PHONE")]
+    public List<string> PhoneNumbers;
+
+## xReviewEnv
+> Review Sequence config
+
+    [XmlElement(ElementName = "Use")]
+    public int Use { get; set; }
+
+    [XmlElement(ElementName = "UseFavorite")]
+    public int UseFavorite { get; set; }
+
+    [XmlElement(ElementName = "UseServerControl")]
+    public int UseServerControl { get; set; }
+
+    [XmlElement(ElementName = "PeriodMIN")]
+    public int PeriodMin { get; set; }
+
+    [XmlElement(ElementName = "StartHour")]
+    public int StartHour { get; set; }
+
+    [XmlElement(ElementName = "EndHour")]
+    public int EndHour { get; set; }
+
+## xPurchaseEnv
+> Purchases Sequence config
+
+    [XmlElement(ElementName = "Use")]
+    public int Use { get; set; }
+
+    [XmlElement(ElementName = "UseServerControl")]
+    public int UseServerControl { get; set; }
+
+    [XmlElement(ElementName = "MusicPath")]
+    public string MusicPath { get; set; }
+
+    [XmlElement(ElementName = "PeriodMIN")]
+    public int PeriodMin { get; set; }
+
+    [XmlElement(ElementName = "StartHour")]
+    public int StartHour { get; set; }
+
+    [XmlElement(ElementName = "EndHour")]
+    public int EndHour { get; set; }
+
+## xAppEnv
+> Application Environment
+
+    [XmlElement(ElementName = "DataBaseType")]
+    public int _databaseType { get; set; }      
+
+    [XmlElement(ElementName = "MDataBase")]
+    public xMDBPath _host;                      
+
+    [XmlElement(ElementName = "DataBase")]
+    public xLDBPaths _liteDBPath;
+
+    [XmlElement(ElementName = "OPTION")]
+    public xOption _option;
+
+    [XmlElement(ElementName = "HISTORY")]
+    public SPath _historyPath;
+
+    [XmlElement(ElementName = "SMS_ALIMI")]
+    public xSMSAlimi _SMS;
+
+    [XmlElement(ElementName = "Review")]
+    public xReviewEnv _review;
+
+    [XmlElement(ElementName = "Purchases")]
+    public xPurchaseEnv _purchase;    
 
 
 ## Environment File
