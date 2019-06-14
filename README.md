@@ -1,6 +1,22 @@
 # KxIx-Dll-Env-xAppconfigMx
 Model Class and Interface for KxIx Environment
 
+## xOption
+>Use Option
+
+    [XmlElement(ElementName = "UseDBItemChk")]
+    public int UseDBItemChk     { get; set; }
+
+    [XmlElement(ElementName = "UseWebItemTitle")]
+    public int UseWebItemTitle  { get; set; }
+
+## IxDBPath
+>DBPath Interface
+
+    interface IxDBPath
+    {
+        string HostName { get; }
+    }
 
 ## Environment File
 
