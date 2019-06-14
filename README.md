@@ -4,23 +4,28 @@ Model Class and Interface for KxIx Environment
 ## xOption
 >Use Option
 
+```c#
     [XmlElement(ElementName = "UseDBItemChk")]
     public int UseDBItemChk     { get; set; }
 
     [XmlElement(ElementName = "UseWebItemTitle")]
     public int UseWebItemTitle  { get; set; }
+```
 
 ## IxDBPath
 >DBPath Interface
 
+```c#
     interface IxDBPath
     {
         string HostName { get; }
     }
+```
 
 ## xLDBPath
 >SQLite DB Path
 
+```c#
     public class xLDBPath : IxDBPath
     {
         [XmlElement(ElementName = "Path")]
@@ -31,10 +36,12 @@ Model Class and Interface for KxIx Environment
 
         ...
     }
+```
 
 ## xLDBPaths
 >SQLite DB Paths    
 
+```c#
     [XmlElement(ElementName = "Item")]
     public xLDBPath Item { get; set; }
 
@@ -52,10 +59,12 @@ Model Class and Interface for KxIx Environment
 
     [XmlElement(ElementName = "Ranking")]
     public xLDBPath Ranking { get; set; }
+```
 
 ## xMDBPath
 >Maria DB Path
 
+```c#
     public class xMDBPath : IxDBPath
     {
         [XmlElement(ElementName = "IP")]
@@ -66,20 +75,24 @@ Model Class and Interface for KxIx Environment
 
         ...
     }
+```
 
 ## xSMSAlimi
 > SMS Alimi Service Use and Phone numbers   
 
+```c#
     [XmlElement(ElementName = "USE")]
     public int Use { get; set; }
 
     [XmlArray("PHONE_NUMBERS")]
     [XmlArrayItem(typeof(string), ElementName = "PHONE")]
     public List<string> PhoneNumbers;
+```
 
 ## xReviewEnv
 > Review Sequence config
 
+```c#
     [XmlElement(ElementName = "Use")]
     public int Use { get; set; }
 
@@ -97,10 +110,12 @@ Model Class and Interface for KxIx Environment
 
     [XmlElement(ElementName = "EndHour")]
     public int EndHour { get; set; }
+```
 
 ## xPurchaseEnv
 > Purchases Sequence config
 
+```c#
     [XmlElement(ElementName = "Use")]
     public int Use { get; set; }
 
@@ -118,10 +133,12 @@ Model Class and Interface for KxIx Environment
 
     [XmlElement(ElementName = "EndHour")]
     public int EndHour { get; set; }
+```
 
 ## xAppEnv
 > Application Environment
 
+```c#
     [XmlElement(ElementName = "DataBaseType")]
     public int _databaseType { get; set; }      
 
@@ -145,10 +162,11 @@ Model Class and Interface for KxIx Environment
 
     [XmlElement(ElementName = "Purchases")]
     public xPurchaseEnv _purchase;    
-
+```
 
 ## Environment File
 
+```Xml
     <?xml version="1.0" encoding="utf-8"?>
     <KxIx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
       <MDataBase>
@@ -213,3 +231,4 @@ Model Class and Interface for KxIx Environment
       </Purchases>
       <DataBaseType>2</DataBaseType>
     </KxIx>
+```
