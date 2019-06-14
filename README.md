@@ -18,6 +18,56 @@ Model Class and Interface for KxIx Environment
         string HostName { get; }
     }
 
+## xLDBPath
+>SQLite DB Path
+
+    public class xLDBPath : IxDBPath
+    {
+        [XmlElement(ElementName = "Path")]
+        public string Path { get; set; }
+
+        [XmlElement(ElementName = "Name")]
+        public string Name { get; set; }
+
+        ...
+    }
+
+## xLDBPaths
+>SQLite DB Paths    
+
+    [XmlElement(ElementName = "Item")]
+    public xLDBPath Item { get; set; }
+
+    [XmlElement(ElementName = "Run")]
+    public xLDBPath Run { get; set; }
+
+    [XmlElement(ElementName = "Review")]
+    public xLDBPath Review { get; set; }
+
+    [XmlElement(ElementName = "Device")]
+    public xLDBPath Device { get; set; }
+
+    [XmlElement(ElementName = "Partnerzone")]
+    public xLDBPath Partnerzone { get; set; }
+
+    [XmlElement(ElementName = "Ranking")]
+    public xLDBPath Ranking { get; set; }
+
+## xLDBPaths
+>Maria DB Path
+
+    public class xMDBPath : IxDBPath
+    {
+        [XmlElement(ElementName = "IP")]
+        public string IP { get; set; }
+
+        [XmlElement(ElementName = "PORT")]
+        public string Port { get; set; }
+
+        ...
+    }
+
+
 ## Environment File
 
     <?xml version="1.0" encoding="utf-8"?>
